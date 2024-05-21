@@ -1,3 +1,4 @@
+from app.models.models import models
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -17,7 +18,7 @@ def create_app(config_class=Config):
     migrate.init_app(app, db)
     login.init_app(app)
 
-    from app import views, models
+    from app import views
     app.register_blueprint(views.bp)
 
     return app
