@@ -1,8 +1,10 @@
 import models
 from datetime import datetime
 from sqlalchemy import Column, String, Float, Integer, ForeignKey,DateTime
+from models import BaseModel, Base
 
-def Visit(Model, Base):
+
+def Visit(BaseModel, Base):
     """
     User model
     """

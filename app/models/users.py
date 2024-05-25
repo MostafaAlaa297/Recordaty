@@ -1,8 +1,10 @@
 import models
 from .user_condition import association_table
 from sqlalchemy import Column, String, Float, Integer, relationship
+from models import BaseModel, Base
 
-def User(Model, Base):
+
+def User(BaseModel, Base):
     """
     User model
     """

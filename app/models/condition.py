@@ -2,8 +2,10 @@ import models
 import sqlalchemy
 from .user_condition import association_table
 from sqlalchemy import Column, String, relationship
+from models import BaseModel, Base
 
-def Condition(Model, Base):
+
+def Condition(BaseModel, Base):
     """
     condition model
     """

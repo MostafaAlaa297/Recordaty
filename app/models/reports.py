@@ -1,7 +1,8 @@
 import models
+from models import BaseModel, Base
 from datetime import datetime
 from sqlalchemy import Column, String, Float, Integer, ForeignKey,DateTime
-def Report(Model, Base):
+def Report(BaseModel, Base):
     """
     Report model
     """
