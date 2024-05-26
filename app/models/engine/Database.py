@@ -1,13 +1,13 @@
 import models
-from models.condition import Condition
-from models.models import BaseModel, Base
-from models.reports import Report
 #from models.user_condition import association_table
-from models.users import User
-from models.visits import Visit
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
+from models.condition import Condition
+from models.models import BaseModel
+from models.reports import Report
+from models.users import User
+from models.visits import Visit
 
 classes = {"Visit": Visit, "Report": Report,
            "Condition": Condition, "User": User}

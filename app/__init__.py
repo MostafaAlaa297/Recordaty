@@ -1,4 +1,4 @@
-from app.models.models import models
+"""from app.models.models import BaseModel
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -21,4 +21,4 @@ def create_app(config_class=Config):
     from app import views
     app.register_blueprint(views.bp)
 
-    return app
+    return app"""
