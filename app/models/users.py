@@ -1,4 +1,4 @@
-import models
+#import models
 #from .user_condition import association_table
 from sqlalchemy import Column, String, Float, Integer
 from sqlalchemy.orm import relationship

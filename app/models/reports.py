@@ -1,5 +1,5 @@
-import models
-#from models import BaseModel, Base
+#import models
+from models import BaseModel, Base
 from datetime import datetime
 from sqlalchemy import Column, String, Float, Integer, ForeignKey,DateTime
 def Report(BaseModel, Base):

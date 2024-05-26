@@ -1,4 +1,4 @@
-import models
+#import models
 #from models.user_condition import association_table
 import sqlalchemy
 from sqlalchemy import create_engine

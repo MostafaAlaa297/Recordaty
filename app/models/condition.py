@@ -1,4 +1,4 @@
-import models
+#import models
 import sqlalchemy
 #from .user_condition import association_table
 from sqlalchemy import Column, String

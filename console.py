@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'app'
 
 import cmd
 import re
-import models
+#import models
 from models.condition import Condition
 from models.models import BaseModel
 from models.reports import Report
