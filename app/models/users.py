@@ -2,7 +2,8 @@
 #from .user_condition import association_table
 from sqlalchemy import Column, String, Float, Integer
 from sqlalchemy.orm import relationship
-from models import BaseModel, Base
+from models.models import BaseModel, Base
+from models.user_condition import association_table
 
 
 def User(BaseModel, Base):

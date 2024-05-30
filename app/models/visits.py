@@ -1,7 +1,7 @@
 #import models
 from datetime import datetime
 from sqlalchemy import Column, String, Float, Integer, ForeignKey,DateTime
-from models import BaseModel, Base
+from models.models import BaseModel, Base
 
 
 def Visit(BaseModel, Base):

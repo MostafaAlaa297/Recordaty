@@ -1,8 +1,9 @@
-#import models
+from models.models import BaseModel, Base
 import sqlalchemy
 #from .user_condition import association_table
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
+from models.user_condition import association_table
 
 def Condition(BaseModel, Base):
     """
