@@ -11,7 +11,6 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #5DADE2;
-  padding: 10px 20px;
   color: white;
 }
 
@@ -25,10 +24,6 @@ header a {
 
 header a:hover {
   text-decoration: underline;
-}
-
-.nav-right .cta-button {
-  margin-bottom: 20px;
 }
 
 .hero {
@@ -65,7 +60,6 @@ header a:hover {
   padding: 18px 50px;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 20px;
 }
 
 .cta-button:hover {
@@ -76,12 +70,12 @@ footer {
   background-color: #5DADE2;
   color: white;
   text-align: center;
-  padding: 20px 0;
   margin-top: -5px;
 }
 
 .social-icons {
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .social-icons a {
@@ -89,14 +83,20 @@ footer {
 }
 
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
 }
 
 footer p {
-  font-size: 0.7rem;
-  margin: 0;
+  font-size: 1rem;
+  margin: 10px;
   color: #E0E0E0;
+  padding: 5px;
 }
 
 .logo {
