@@ -1,3 +1,4 @@
+// Home
 document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById("popup");
     const closeBtn = document.querySelector(".popup .close");
@@ -24,3 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// Profile
+document.addEventListener("DOMContentLoaded", () => {
+    const editProfileButton = document.querySelector(".edit-profile-button");
+    const editProfilePopup = document.querySelector("#edit-profile-popup");
+    const closeBtn = document.querySelector("#edit-profile-popup .close");
+
+    function showPopup() {
+        editProfilePopup.style.display = "block";
+        console.log(editProfilePopup.style.display);
+    }
+
+    function hidePopup() {
+        editProfilePopup.style.display = "none";
+    }
+
+    editProfileButton.addEventListener("click", showPopup);
+    closeBtn.addEventListener("click", hidePopup);
+
+    window.addEventListener("click", (event) => {
+        if (event.target === editProfilePopup) {
+            hidePopup();
+        }
+    });
+});
+

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Profile</title>
+        <link rel="stylesheet" href="../static/css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="nav-left">
+                <a href="#"
+                    ><img class="logo" src="../static/images/Recordaty.svg" alt="Logo"
+                /></a>
+            </div>
+        </header>
+        <main>
+            <section class="profile">
+                <div class="profile-container">
+                    <h2>Profile</h2>
+                    <div class="profile-details">
+                        <div class="profile-info">
+                            <p><strong>Name:</strong> Mostafa Alaa</p>
+                            <p><strong>Email:</strong> me@gmail.com</p>
+                            <p><strong>Gender:</strong> Male</p>
+                            <p><strong>Age:</strong> 25</p>
+                            <p><strong>Phone Number:</strong> 0123456789</p>
+                        </div>
+                        <div class="profile-info">
+                            <p><strong>Health Insurance:</strong> Yes</p>
+                            <p><strong>Weight:</strong> 70KG</p>
+                            <p><strong>Height:</strong> 184M</p>
+                            <p><strong>Blood Type:</strong> A-</p>
+                            <p><strong>Allergies:</strong> None</p>
+                        </div>
+                        <div class="profile-info">
+                            <p><strong>Medications:</strong> None</p>
+                            <p><strong>Chronic Illnesses:</strong> None</p>
+                            <p>
+                                <strong>Family Medical History:</strong>
+                                Diabetes
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-conditions">
+                        <div class="condition">Condition 1</div>
+                        <div class="condition">Condition 2</div>
+                        <div class="condition">Condition 3</div>
+                        <div class="condition">Condition 4</div>
+                    </div>
+                    <button class="edit-profile-button">Edit Profile</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="social-icons">
+                <a href="#"
+                    ><img src="../static/images/linkedin-round-svgrepo-com.svg" alt="LinkedIn"
+                /></a>
+                <!-- <a href="#" -->
+                    <!-- ><img src="facebook-svgrepo-com.svg" alt="Facebook" -->
+                <!-- /></a> -->
+                <a href="#"
+                    ><img src="../static/images/github-svgrepo-com.svg" alt="GitHub"
+                /></a>
+            </div>
+            <p>All rights reserved to M&Y Team ©2024</p>
+        </footer>
+        <!--Edit profile popup-->
+        <div id="edit-profile-popup" class="edit-profile-popup">
+            <div class="edit-profile-popup-content">
+                <span class="close">&times;</span>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" />
+                    <label for="text">Name</label>
+                    <input type="text" id="name" name="name" />
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" />
+                    <label for="gender">Gender</label>
+                    <input type="text" id="gender" name="gender" />
+                    <button type="submit" class="edit-profile-popup-button">
+                        Edit profile details
+                    </button>
+                </form>
+            </div>
+        </div>
+	<script src="script.js"></script>
+    </body>
+</html>

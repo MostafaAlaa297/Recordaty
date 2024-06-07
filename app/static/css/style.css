@@ -1,0 +1,453 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5DADE2;
+  padding: 10px 20px;
+  color: white;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.nav-right .cta-button {
+  margin-bottom: 20px;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+  opacity: 70%;
+}
+
+.hero-content {
+  position: absolute;
+  font-size: 2rem;
+  width: 45ch;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cta-button {
+  background-color: #5DADE2;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  padding: 18px 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #002D5A;
+}
+
+footer {
+  background-color: #5DADE2;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: -5px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+footer p {
+  font-size: 0.7rem;
+  margin: 0;
+  color: #E0E0E0;
+}
+
+.logo {
+  width: 140%;
+  height: auto;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup form label {
+  text-align: left;
+  margin: 10px 0 5px;
+}
+
+.popup form input {
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup form .popup-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.popup form .popup-button:hover {
+  background-color: #004A89;
+  color: white;
+}
+
+.popup form .google {
+  background-color: #4285F4;
+  color: white;
+}
+
+.popup form .google:hover {
+  background-color: #357AE8;
+}
+
+.google-signup-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0073b1;
+  padding: 10px 20px;
+  color: white;
+  z-index: 10;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #f0f0f0;
+}
+
+.profile {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+  position: relative;
+  top: -60px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile h2 {
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+.profile-conditions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.condition {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.edit-profile-button {
+  background-color: #004A89;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-profile-button:hover {
+  background-color: #002D5A;
+}
+
+footer {
+  background-color: #0073b1;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Edit Profile Popup */
+.edit-profile-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.edit-profile-popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.edit-profile-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-profile-popup form label {
+  text-align: left;
+  margin: 10px 0 5px;
+}
+
+.edit-profile-popup form input {
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-profile-popup form .edit-profile-popup-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  background-color: #004A89;
+  color: white;
+}
+
+.edit-profile-popup form .edit-profile-popup-button:hover {
+  background-color: #002D5A;
+}
+
+.edit-profile-popup .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.edit-profile-popup .close:hover,
+.edit-profile-popup .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media queries */
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 40px;
+    /* Increase padding for larger screens */
+  }
+
+  footer {
+    padding: 30px 0;
+    /* Increase padding for larger screens */
+  }
+
+  .profile {
+    padding: 60px;
+  }
+
+  .profile-details {
+    margin-bottom: 50px;
+  }
+
+  .condition {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 10px;
+    font-size: 90%;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .profile {
+    padding: 40px;
+  }
+
+  .profile-details,
+  .profile-conditions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-info,
+  .condition {
+    margin: 10px 0;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right a {
+    margin: 5px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+}
