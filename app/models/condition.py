@@ -1,18 +1,25 @@
 from models.models import BaseModel, Base
 import sqlalchemy
 #from .user_condition import association_table
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, Integer, Float, ForeignKey, Table
 from sqlalchemy.orm import relationship
-from models.user_condition import association_table
 
-def Condition(BaseModel, Base):
+class Condition(BaseModel, Base):
     """
     condition model
     """
     __tablename__ = 'conditions'
     condition_name = Column(String(128), nullable=False)
 
-    users = relationship('User', secondary=association_table, back_populates='conditions')
-    visits = relationship("Visit", backref="condition", cascade="all, delete")
-    reports = relationship("Report", backref="condition", cascade="all, delete")
+    visits = relationship("Visit", backref="conditions", cascade="all, delete")
+    reports = relationship("Report", backref="conditions", cascade="all, delete")
 
+    user_condition = Table('user_condition', Base.metadata,
+                          Column('user_id', String(60),
+                                ForeignKey('users.id', onupdate='CASCADE',
+                                        ondelete='CASCADE'),
+                                primary_key=True),
+                          Column('condition_id', String(60),
+                                 ForeignKey('conditions.id', onupdate='CASCADE',
+                                            ondelete='CASCADE'),
+                                 primary_key=True))

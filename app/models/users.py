@@ -1,12 +1,10 @@
-#import models
-#from .user_condition import association_table
+
 from sqlalchemy import Column, String, Float, Integer
 from sqlalchemy.orm import relationship
 from models.models import BaseModel, Base
-from models.user_condition import association_table
 
 
-def User(BaseModel, Base):
+class User(BaseModel, Base):
     """
     User model
     """
@@ -15,33 +13,18 @@ def User(BaseModel, Base):
     age = Column(Integer, nullable=True)
     weight = Column(Float, nullable=True)
     height = Column(Float, nullable=True)
-    gender = Column(String(6), nullable=False)
-    condition = relationship('Condition', secondary=association_table, back_populates='users')
-
-
-    def __init__(self, gender):
-        if gender == "male" or gender == "female":
-            self.gender = gender
-        else:
-            self.gender = "male"
+    gender = Column(String(10), nullable=False)
+    blood_type = Column(String(3), nullable=True)
 
     @property
-    def gender(self):
-        """getter for gender"""
-        return self.gender
-
-    @property
-    def blood_type(self):  
+    def blood_type(self):
         """getter for blood types"""
-        return self.blood_type
+        return self._blood_type
 
-    @gender.setter
-    def gender(self, value):
-        """setter for gender"""
-        if value == "male" or value == "female":
-            self.gender = value
-
+    @blood_type.setter
     def blood_type(self, value):
         """setter for blood types"""
-        if value in ["O+", "O-", "A+", "A-", "B+", "B-", "AB", "AB-"]:
-            self.blood_type = value
+        if value in ["O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"]:
+            self._blood_type = value
+        else:
+            self._blood_type = None

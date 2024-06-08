@@ -10,11 +10,11 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'app'
 
 import cmd
 import re
-#import models
+import models
+from models.users import User
 from models.condition import Condition
 from models.models import BaseModel
 from models.reports import Report
-from models.users import User
 from models.visits import Visit
 
 classes = {"Condition": Condition, "BaseModel": BaseModel,
@@ -51,19 +51,24 @@ class RecordatyCommand(cmd.Cmd):
                 if len(splitted) == 2:
                     key = splitted[0]
                     val = splitted[1]
+                    print(key)
+                    print(val)
                     if val.startswith('"') and val.endswith('"'):
                         val_spaced = val.replace("_", " ")
                         val_final = val_spaced.replace("\"", "")
                         print(val_spaced + " Spaced value " + val)
                         setattr(new_instance, key, val_final)
+                        print('1')
                     elif re.search("^-?\d+\.{1}\d+$", val):
                         val = float(val)
                         print("float is " + str(val))
                         setattr(new_instance, key, val)
+                        print('2')
                     elif re.search("^-?\d+$", val):
                         val = int(val)
                         setattr(new_instance, key, val)
                         print("int is " + str(val))
+                        print('3')
                 else:
                     pass
                 
