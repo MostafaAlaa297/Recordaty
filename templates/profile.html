@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="nav-left">
+        <a href="#"><img class="logo" src="{{ url_for('static', filename='Recordaty.svg') }}" alt="Logo"></a>
+        </div>
+        <div class="nav-right">
+            <a href="{{ url_for('home') }}" id="prohomefile">Home</a>
+        </div>
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile-container">
+                <h2 id="profile-title">Profile</h2>
+                <div class="profile-details">
+                    <div class="profile-info">
+                        <p><strong>Name:</strong> Mostafa Alaa</p>
+                        <p><strong>Email:</strong> me@gmail.com</p>
+                        <p><strong>Gender:</strong> Male</p>
+                        <p><strong>Age:</strong> 25</p>
+                        <p><strong>Phone Number:</strong> 0123456789</p>
+                    </div>
+                    <div class="profile-info">
+                        <p><strong>Health Insurance:</strong> Yes</p>
+                        <p><strong>Weight:</strong> 70KG</p>
+                        <p><strong>Height:</strong> 184M</p>
+                        <p><strong>Blood Type:</strong> A-</p>
+                        <p><strong>Allergies:</strong> None</p>
+                    </div>
+                    <div class="profile-info">
+                        <p><strong>Medications:</strong> None</p>
+                        <p><strong>Chronic Illnesses:</strong> None</p>
+                        <p><strong>Family Medical History:</strong> Diabetes</p>
+                    </div>
+                </div>
+                <a href="{{ url_for('edit_profile') }}"><button class="edit-profile-button">Edit Profile</button></a>
+                <div class="profile-conditions">
+                    <div class="add-condition">+ Add New Condition</div>
+                    <input type="text" id="new-condition-input" placeholder="Enter new condition" style="display:none;">
+                    <button id="add-condition-button" style="display:none;">Add Condition</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="{{ url_for('static', filename='linkedin-round-svgrepo-com.svg') }}" alt="LinkedIn"></a>
+            <a href="https://github.com/MostafaAlaa297/Recordaty"><img src="{{ url_for('static', filename='github-svgrepo-com.svg') }}" alt="GitHub"></a>
+        </div>
+        <p>All rights reserved to M&Y Team ©2024</p>
+    </footer>
+    
+    <!-- Popup overlay -->
+    <div class="popup-overlay"></div>
+
+    <!-- Condition Info Popup -->
+    <div id="condition-info-popup" class="condition-info-popup">
+        <span class="condition-info-close">&times;</span>
+        <input type="text" id="myInput" placeholder="Search for data..">
+        <table id="condition-info-table">
+            <tr class="header">
+                <th style="width:60%;">Date</th>
+                <th style="width:60%;">Time</th>
+                <th style="width:40%;">Type of Medical Service</th>
+                <th style="width:40%;">Healthcare Professional Name</th>
+            </tr>
+            <tr>
+                <td>June,12-12:00PM</td>
+                <td>12:00PM</td>
+                <td>Surgery</td>
+                <td>Alfreds Futterkiste</td>
+            </tr>
+            <tr>
+                <td>June,12-12:00PM</td>
+                <td>12:00PM</td>
+                <td>Doctor visit</td>
+                <td>Berglunds snabbkop</td>
+            </tr>
+            <tr>
+                <td>June,12-12:00PM</td>
+                <td>12:00PM</td>
+                <td>Analysis</td>
+                <td>Island Trading</td>
+            </tr>
+            <tr>
+                <td>June,12-12:00PM</td>
+                <td>12:00PM</td>
+                <td>Doctor visit</td>
+                <td>Koniglich Essen</td>
+            </tr>
+        </table>
+        <a href="{{ url_for('edit_condition') }}"><button class="edit-condition-button">Edit Table Data</button></a>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

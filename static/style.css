@@ -1,0 +1,651 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5DADE2;
+  color: white;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+  opacity: 70%;
+}
+
+.hero-content {
+  position: absolute;
+  font-size: 2rem;
+  width: 45ch;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header .cta-button {
+  background-color: #5DADE2;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero .cta-button {
+  background-color: #5DADE2;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 13px 35px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.cta-button:hover {
+  background-color: #002D5A;
+}
+
+footer {
+  background-color: #5DADE2;
+  color: white;
+  text-align: center;
+  margin-top: -5px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 10px;
+  color: #E0E0E0;
+  padding: 5px;
+}
+
+.logo {
+  width: 140%;
+  height: auto;
+}
+
+#signup-title, #login-title {
+  font-weight: bold;
+  color: #357AE8;
+}
+
+.register-popup, .login-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login-popup-content, .register-popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.register-close, .login-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.register-close:hover, .login-close:hover,
+.register-close:focus, .login-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.register-popup form, .login-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-popup form label, .login-popup form label {
+  text-align: left;
+  margin: 10px 0 5px;
+}
+
+.register-popup form input, .login-popup form input {
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-popup form .register-popup-button, .login-popup form .login-popup-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.register-popup form .register-popup-button:hover, .login-popup form .login-popup-button:hover {
+  background-color: #004A89;
+  color: white;
+}
+
+.register-popup form .google, .login-popup form .google {
+  background-color: #4285F4;
+  color: white;
+}
+
+.register-popup form .google:hover, .login-popup form .google:hover {
+  background-color: #357AE8;
+}
+
+.google-signup-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 5px;
+}
+
+.google:hover {
+  cursor: pointer;
+}
+
+/* Profile */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0073b1;
+  padding: 10px 20px;
+  color: white;
+  z-index: 10;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #f0f0f0;
+}
+
+.profile {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+  position: relative;
+  top: -60px;
+  max-width: 850px;
+  max-height: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile h2 {
+  margin-bottom: 20px;
+  color: #004A89;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin: 20px;
+}
+
+.profile-info {
+  flex: 1;
+  margin: 10px;
+  text-align: left;
+}
+
+.profile-info p {
+  margin: 15px 0;
+}
+
+.edit-profile-button {
+  background-color: #004A89;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-profile-button:hover {
+  background-color: #002D5A;
+}
+
+.profile-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.condition, .add-condition {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1 1 calc(33% - 20px);
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  word-wrap: break-word; /* Ensure words break and wrap properly */
+  overflow-wrap: break-word; /* Ensure long words break and wrap */
+}
+
+.condition:hover, .add-condition:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-condition {
+  color: #0073b1;
+  font-weight: bold;
+}
+
+.add-condition:hover {
+  color: #004A89;
+}
+
+#new-condition-input, #add-condition-button {
+  display: none;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 32px); /* Adjusting for padding */
+  box-sizing: border-box;
+}
+
+#new-condition-input {
+  width: calc(100% - 32px); /* Adjusting for padding */
+  max-width: 100px;
+  font-size: 14px;
+}
+
+#add-condition-button {
+  width: auto;
+  max-width: 80px;
+  background-color: #0073b1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-condition-button:hover {
+  background-color: #004A89;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Condition info popup */
+/* Popup background overlay */
+.popup-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Popup container */
+.condition-info-popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001; /* Ensure it's above the overlay */
+  width: 80%;
+  height: 80%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+/* Close button */
+.condition-info-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Search input */
+#myInput {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Table styling */
+#condition-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#condition-info-table th, #condition-info-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+#condition-info-table tr.header {
+  background-color: #f2f2f2;
+}
+
+#condition-info-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.edit-condition-button {
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  top: 15px;
+  background-color: #0073b1;
+  margin: 15px 0 0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-condition-button:hover {
+  background-color: #005b8f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #0073b1;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Edit Profile Popup */
+/* .edit-profile-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.edit-profile-popup-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 70%;
+  height: 75%;
+  max-width: 750px;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+#edit-profile-title {
+  color: #004A89;;
+}
+
+
+.edit-profile-popup form .edit-health-insurance-field {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.edit-profile-popup form {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-auto-flow: row;
+  grid-gap: .8em .5em;
+}
+
+.edit-profile-popup form label {
+  text-align: left;
+}
+
+.edit-profile-popup form input,
+.edit-profile-popup form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-profile-popup form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.edit-profile-popup form .edit-profile-popup-button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  background-color: #004A89;
+  color: white;
+}
+
+.edit-profile-popup form .edit-profile-popup-button:hover {
+  background-color: #002D5A;
+}
+
+.edit-profile-popup .edit-profile-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.edit-profile-popup .edit-profile-close:hover,
+.edit-profile-popup .edit-profile-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} */
+
+/* Media queries */
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 40px;
+    /* Increase padding for larger screens */
+  }
+
+  footer {
+    padding: 30px 0;
+    /* Increase padding for larger screens */
+  }
+
+  .profile {
+    padding: 60px;
+  }
+
+  .profile-details {
+    margin-bottom: 50px;
+  }
+
+  .condition {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 10px;
+    font-size: 90%;
+  }
+
+  .cta-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .profile {
+    padding: 40px;
+  }
+
+  .profile-details,
+  .profile-conditions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-info,
+  .condition {
+    margin: 10px 0;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right a {
+    margin: 5px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+}

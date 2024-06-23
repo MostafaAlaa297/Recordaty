@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  background-color: #0073b1;
+  color: white;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+/* Main container for the edit condition page */
+.edit-condition-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
+.edit-condition-content {
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+#edit-condition-title {
+  color: #004A89;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+.edit-condition-content form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 15px;
+}
+
+.edit-condition-content form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-condition-content form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.edit-condition-content form input,
+.edit-condition-content form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-condition-content form .form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.edit-condition-content form .edit-condition-button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #004A89;
+  color: white;
+  margin: 20px 0 0 70px;
+  justify-self: center;
+}
+
+.edit-condition-content form .edit-condition-button:hover {
+  background-color: #002D5A;
+}
+
+footer {
+  background-color: #5DADE2;
+  color: white;
+  text-align: center;
+  margin-top: -5px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 10px;
+  color: #E0E0E0;
+  padding: 5px;
+}
+
+.logo {
+  width: 140%;
+  height: auto;
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordaty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <div class="nav-left">
+        <a href="#"><img class="logo" src="{{ url_for('static', filename='Recordaty.svg') }}" alt="Logo"></a>
+    </div>
+    <div class="nav-right">
+        <a href="#" id="get-started"><button class="cta-button">Get Started</button></a>
+        <a href="#" id="login">Login</a>
+        <a href="{{ url_for('profile') }}" id="profile">Profile</a>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <img src="{{ url_for('static', filename='landing.jpg') }}" alt="Background Image" class="hero-image">
+        <div class="hero-content">
+            <h1>Unlock Your Health Journey: Seamlessly Digital, Simply Easier</h1>
+            <button class="cta-button" id="popup-get-started">Get Started</button>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="social-icons">
+        <a href="#"><img src="{{ url_for('static', filename='linkedin-round-svgrepo-com.svg') }}" alt="LinkedIn"></a>
+        <a href="https://github.com/MostafaAlaa297/Recordaty"><img src="{{ url_for('static', filename='github-svgrepo-com.svg') }}" alt="GitHub"></a>
+    </div>
+    <p>All rights reserved to M&Y Team ©2024</p>
+</footer>
+<!-- Register Popup -->
+<div id="register-popup" class="register-popup">
+    <div class="register-popup-content">
+        <span class="register-close">&times;</span>
+        <h3 id="signup-title">Signup</h3>
+        <hr>
+        <form id="register-form" method="POST" action="{{ url_for('register') }}">
+            {{ register_form.hidden_tag() }}
+            {{ register_form.email.label }}<br>
+            {{ register_form.email(size=32, type='email') }}<br>
+            {{ register_form.password.label }}<br>
+            {{ register_form.password(size=32) }}<br>
+            {{ register_form.confirm_password.label }}<br>
+            {{ register_form.confirm_password(size=32) }}<br>
+            {{ register_form.age.label }}<br>
+            {{ register_form.age(size=32) }}<br>
+            {{ register_form.gender.label }}<br>
+            {{ register_form.gender() }}<br>
+            {{ register_form.phone1.label }}<br>
+            {{ register_form.phone1(size=32, minlength=10, maxlength=13) }}<br>
+            {{ register_form.phone2.label }}<br>
+            {{ register_form.phone2(size=32, minlength=10, maxlength=13) }}<br>
+            {{ register_form.submit(class_='register-popup-button') }}
+        </form>
+        <hr>
+        <button type="button" class="register-popup-button google">
+            <img class="google-signup-logo" src="{{ url_for('static', filename='google-svgrepo-com.svg') }}" alt="google-signup">
+            <span class="google-signup-text">Sign up with Google</span>
+        </button>
+    </div>
+</div>
+
+<!-- Login popup -->
+<div id="login-popup" class="login-popup">
+    <div class="login-popup-content">
+        <span class="login-close">&times;</span>
+        <h3 id="login-title">Login</h3>
+        <hr>
+        <form id="login-form" method="POST" action="{{ url_for('login') }}">
+            {{ login_form.hidden_tag() }}
+            {{ login_form.email.label }}<br>
+            {{ login_form.email(size=32) }}<br>
+            {{ login_form.password.label }}<br>
+            {{ login_form.password(size=32) }}<br>
+            {{ login_form.remember() }} {{ login_form.remember.label }}<br>
+            {{ login_form.submit(class_='login-popup-button') }}
+        </form>
+        <hr>
+        <button type="button" class="login-popup-button google">
+            <img class="google-signup-logo" src="{{ url_for('static', filename='google-svgrepo-com.svg') }}" alt="google-signup">
+            <span class="google-signup-text">Sign up with Google</span>
+        </button>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

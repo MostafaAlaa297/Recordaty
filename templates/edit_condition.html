@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Condition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit_condition.css') }}">
+</head>
+<body>
+    <header>
+        <div class="nav-left">
+        <a href="#"><img class="logo" src="{{ url_for('static', filename='Recordaty.svg') }}" alt="Logo"></a>
+        </div>
+        <div class="nav-right">
+            <a href="{{ url_for('home') }}" id="prohomefile">Home</a>
+            <a href="{{ url_for('profile') }}" id="profile">Profile</a>
+        </div>
+    </header>
+    <div class="edit-condition-container">
+        <div class="edit-condition-content">
+            <h3 id="edit-condition-title">Edit Condition</h3>
+            <hr>
+            <form id="edit-condition-form" method="POST" action="{{ url_for('edit_condition') }}">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.date.label }}
+                    {{ form.date(size=32) }}
+                </div>
+                <div class="form-group">
+                    {{ form.time.label }}
+                    {{ form.time() }}
+                </div>
+                <div class="form-group">
+                    {{ form.type.label }}
+                    {{ form.type() }}
+                </div>
+                <div class="form-group">
+                    {{ form.healthcare_professional_name.label }}
+                    {{ form.healthcare_professional_name(size=32) }}
+                </div>
+                <div class="form-group">
+                    {{ form.medical_report.label }}
+                    {{ form.medical_report() }}
+                </div>
+                <div class="form-submit">
+                    {{ form.submit(class_='edit-condition-button') }}
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="{{ url_for('static', filename='linkedin-round-svgrepo-com.svg') }}" alt="LinkedIn"></a>
+            <a href="https://github.com/MostafaAlaa297/Recordaty"><img src="{{ url_for('static', filename='github-svgrepo-com.svg') }}" alt="GitHub"></a>
+        </div>
+        <p>All rights reserved to M&Y Team ©2024</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
